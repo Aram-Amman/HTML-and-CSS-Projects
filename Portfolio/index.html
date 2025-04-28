@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Retro Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      padding-top: 60px;
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ff0066;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #660033;
+    }
+
+    /* Hero Image */
+    .hero {
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-image {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+      border-radius: 15px;
+      filter: sepia(60%) contrast(1.2);
+    }
+
+    .image-overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* Table */
+    table {
+      width: 80%;
+      margin: 2rem auto;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #f5f5f5;
+    }
+
+    th {
+      background-color: #ff0066;
+      color: white;
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    /* Two-column Layout */
+    .two-column {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem;
+      gap: 20px;
+    }
+
+    .column {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      width: 48%;
+      color: #ffcc00;
+      height: 200px;
+    }
+
+    /* Paragraph Hover Effect */
+    .hover-effect {
+      text-align: center;
+      margin: 2rem;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .hover-effect:hover {
+      color: #ffcc00;
+    }
+
+    /* Image Overlay Fade */
+    .image-fade {
+      position: relative;
+      width: 80%;
+      margin: 2rem auto;
+    }
+
+    .fade-image {
+      width: 100%;
+      border-radius: 10px;
+      transition: opacity 0.5s;
+    }
+
+    .fade-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      opacity: 0;
+      border-radius: 10px;
+      transition: opacity 0.5s;
+    }
+
+    .image-fade:hover .fade-overlay {
+      opacity: 1;
+    }
+
+    /* Autoplay Background Video */
+    .background-video {
+      width: 100%;
+      display: block;
+      margin-top: 2rem;
+    }
+
+    /* Video with Overlay Text */
+    .video-overlay-container {
+      position: relative;
+      max-height: 400px;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .video-overlay {
+      width: 100%;
+    }
+
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-size: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#how-to">How To</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <img src="https://images.pexels.com/photos/7788010/pexels-photo-7788010.jpeg" class="hero-image" alt="Retro Sign" />
+    <div class="image-overlay-text">Welcome to My Retro Portfolio</div>
+  </header>
+
+  <!-- About + Table -->
+  <section id="about">
+    <h2>About Me</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Experience</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>aquired</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>just aquired</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>not yet</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Two-column -->
+  <section class="two-column">
+    <div class="column">
+      <h3>Design</h3>
+      <p>Retro Lorem Ipsum.</p>
+    </div>
+    <div class="column">
+      <h3>Code</h3>
+      <p>Lorem Ipsum</p>
+    </div>
+  </section>
+
+  <!-- Hover paragraph -->
+  <p class="hover-effect">Hover over this retro text!</p>
+
+  <!-- Image Overlay Fade -->
+  <section id="how-to" class="image-fade">
+    <img src="https://cdn.pixabay.com/photo/2016/03/16/23/55/flea-market-1262036_1280.jpg" class="fade-image" alt="Vinyl Player" />
+    <div class="fade-overlay">Now Playing: Classic Code</div>
+  </section>
+
+  <!-- Background video -->
+  <section>
+    <video autoplay muted loop class="background-video">
+      <source src="https://cdn.pixabay.com/video/2017/03/19/8437-209165711_tiny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Video with overlay text -->
+  <section class="video-overlay-container">
+    <video autoplay muted loop class="video-overlay">
+      <source src="https://cdn.pixabay.com/video/2020/11/25/57307-484331149_tiny.mp4" type="video/mp4">
+    </video>
+    <div class="video-text">Retro Tech in Motion</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Retro Portfolio by Aram</p>
+  </footer>
+
+</body>
+</html>
